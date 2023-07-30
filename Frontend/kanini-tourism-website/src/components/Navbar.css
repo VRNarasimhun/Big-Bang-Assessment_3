@@ -1,0 +1,32 @@
+/* styles.css (create a new CSS file in the src folder) */
+.navbar {
+    background-color: #807464; /* Background color for the navbar */
+    height: 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem; /* Adjust the font size for the brand text */
+    color: red; /* Brand text color */
+    text-decoration: none; /* Remove underline from the brand text */
+  }
+  
+  .navbar-nav {
+    align-items: end; /* Center the nav items vertically */
+
+  }
+  
+  .nav-item {
+    margin: 0 10px; /* Add margin between nav items */
+  }
+  
+  .nav-link {
+    color: #343a40; /* Nav item text color */
+    text-decoration: none; /* Remove underline from nav item text */
+    transition: color 0.3s ease-in-out; /* Add a smooth transition effect for color change */
+    align-items: flex-end;
+  }
+  
+  .nav-link:hover {
+    color: #007bff; /* Change nav item text color on hover */
+  }
+  
