@@ -2273,11 +2273,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\Desktop\\.net\\KaniniTourismSolution\\KaniniTourismApplication\\KaniniTourismApplication.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\Desktop\\Big Bang Assessment 3\\KaniniTourismSolution\\KaniniTourismApplication\\KaniniTourismApplication.csproj",
       "projectName": "KaniniTourismApplication",
-      "projectPath": "C:\\Users\\Dell\\Desktop\\.net\\KaniniTourismSolution\\KaniniTourismApplication\\KaniniTourismApplication.csproj",
+      "projectPath": "C:\\Users\\Dell\\Desktop\\Big Bang Assessment 3\\KaniniTourismSolution\\KaniniTourismApplication\\KaniniTourismApplication.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\Desktop\\.net\\KaniniTourismSolution\\KaniniTourismApplication\\obj\\",
+      "outputPath": "C:\\Users\\Dell\\Desktop\\Big Bang Assessment 3\\KaniniTourismSolution\\KaniniTourismApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

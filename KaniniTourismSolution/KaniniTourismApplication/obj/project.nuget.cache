@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GN/nB0YDeZ2+T8/LEgwOojm4bRgzbu9Tf15d82uqzNt1G+wNVoHj+wY6AZxpfba0iyGWP9d6qcGrMiZ5Rd96+g==",
+  "dgSpecHash": "2PYfOALFppVQW+OyrYFJbPK7mbjkNFphSlOKixRyEtwFFXz+scJjs/PpAHZjybTQh2x3yFcwX4yPNfWOt4aTow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\Desktop\\.net\\KaniniTourismSolution\\KaniniTourismApplication\\KaniniTourismApplication.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\Desktop\\Big Bang Assessment 3\\KaniniTourismSolution\\KaniniTourismApplication\\KaniniTourismApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",

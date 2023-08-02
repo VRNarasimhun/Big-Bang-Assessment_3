@@ -1,0 +1,72 @@
+.TravelAgentRegistration {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .registration-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* Additional style for GST Number input */
+  .form-group input {
+    margin-bottom: 5px;
+  }
+
+  /* TravelAgentRegistration.css */
+/* ... (your existing styles) ... */
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.back-symbol {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
