@@ -2,7 +2,7 @@
 {
     public class StatusDTO
     {
-        public int TravelAgentID { get; set; }
-        public string status { get; set; }
+        public string AgentEmail { get; set; }
+        public string Status { get; set; }
     }
 }

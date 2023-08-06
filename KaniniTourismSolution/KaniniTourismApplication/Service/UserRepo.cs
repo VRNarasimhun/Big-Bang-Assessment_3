@@ -4,18 +4,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KaniniTourismApplication.Service
 {
-    public class UserRepo : IRepo<User, int>
+    public class UserRepo : IRepo<User, string>
     {
         private readonly Context _context;
         public UserRepo(Context context)
         {
             _context = context;
-
         }
+
         public async Task<User?> Add(User item)
         {
-            var user_id = _context.Users.SingleOrDefault(u => u.UserId == item.UserId);
-            if (user_id == null)
+            var user_mail = _context.Users.SingleOrDefault(u => u.Email == item.Email);
+            if (user_mail == null)
             {
                 try
                 {
@@ -31,7 +31,7 @@ namespace KaniniTourismApplication.Service
             return null;
         }
 
-        public async Task<User?> Delete(int id)
+        public async Task<User?> Delete(string id)
         {
             try
             {
@@ -43,6 +43,7 @@ namespace KaniniTourismApplication.Service
                     return user;
                 }
                 return null;
+
             }
             catch (Exception)
             {
@@ -50,11 +51,11 @@ namespace KaniniTourismApplication.Service
             }
         }
 
-        public async Task<User?> Get(int id)
+        public async Task<User?> Get(string id)
         {
             try
             {
-                var user = await _context.Users.SingleOrDefaultAsync(u => u.UserId == id);
+                var user = await _context.Users.SingleOrDefaultAsync(u => u.Email == id);
                 if (user == null)
                 {
                     return null;
@@ -86,15 +87,14 @@ namespace KaniniTourismApplication.Service
 
         public async Task<User?> Update(User item)
         {
-            var user = _context.Users.SingleOrDefault(u => u.UserId == item.UserId);
+            var user = _context.Users.SingleOrDefault(u => u.Email == item.Email);
             if (user != null)
             {
                 try
                 {
-                    user.EmailId = item.EmailId;
+                    user.Email = item.Email;
                     await _context.SaveChangesAsync();
                     return user;
-
                 }
                 catch (Exception)
                 {

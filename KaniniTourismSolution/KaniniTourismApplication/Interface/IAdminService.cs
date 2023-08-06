@@ -6,8 +6,6 @@ namespace KaniniTourismApplication.Interface
 {
     public interface IAdminService
     {
-        public Task<TravelAgent?> UpdateStatus(StatusDTO status);
-
-
+        public Task<Agent?> UpdateStatus(StatusDTO status);
     }
 }

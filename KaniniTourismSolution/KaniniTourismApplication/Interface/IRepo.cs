@@ -1,6 +1,6 @@
 ﻿namespace KaniniTourismApplication.Interface
 {
-    public interface IRepo <T,K>
+    public interface IRepo<T, K>
     {
         public Task<T?> Add(T item);
         public Task<T?> Update(T item);

@@ -20,7 +20,7 @@ namespace KaniniTourismApplication.Service
             //User identity
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.NameId,user.UserId.ToString()),
+                new Claim(JwtRegisteredClaimNames.NameId,user.Email),
                 new Claim(ClaimTypes.Role,user.Role)
             };
             //Signature algorithm
@@ -40,4 +40,3 @@ namespace KaniniTourismApplication.Service
         }
     }
 }
-

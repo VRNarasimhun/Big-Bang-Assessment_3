@@ -4,19 +4,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KaniniTourismApplication.Service
 {
-    public class TravellerRepo : IRepo<Traveller, int>
+    public class TravellerRepo : IRepo<Traveller, string>
     {
         private readonly Context _context;
         public TravellerRepo(Context context)
         {
-
             _context = context;
-
         }
+
         public async Task<Traveller?> Add(Traveller item)
         {
-            var traveller_id = _context.Travellers.SingleOrDefault(p => p.TravellerId == item.TravellerId);
-            if (traveller_id == null)
+            var traveller_mail = _context.Travellers.SingleOrDefault(t => t.Email == item.Email);
+            if (traveller_mail == null)
             {
                 try
                 {
@@ -32,7 +31,7 @@ namespace KaniniTourismApplication.Service
             return null;
         }
 
-        public async Task<Traveller?> Delete(int id)
+        public async Task<Traveller?> Delete(string id)
         {
             try
             {
@@ -49,20 +48,18 @@ namespace KaniniTourismApplication.Service
             {
                 throw new Exception();
             }
-
         }
 
-
-        public async Task<Traveller?> Get(int id)
+        public async Task<Traveller?> Get(string id)
         {
             try
             {
-                var patient = await _context.Travellers.SingleOrDefaultAsync(i => i.TravellerId == id);
-                if (patient == null)
+                var traveller = await _context.Travellers.SingleOrDefaultAsync(t => t.Email == id);
+                if (traveller == null)
                 {
                     return null;
                 }
-                return patient;
+                return traveller;
             }
             catch (Exception)
             {
@@ -87,19 +84,18 @@ namespace KaniniTourismApplication.Service
             }
         }
 
-
         public async Task<Traveller?> Update(Traveller item)
         {
-            var traveller = _context.Travellers.SingleOrDefault(p => p.TravellerId == item.TravellerId);
+            var traveller = _context.Travellers.SingleOrDefault(t => t.Email == item.Email);
             if (traveller != null)
             {
                 try
                 {
                     traveller.Name = item.Name;
-                    traveller.Address = item.Address;
-                    traveller.Email = item.Email;
+                    traveller.DateOfBirth = item.DateOfBirth;
                     traveller.Phone = item.Phone;
-                    traveller.Gender = item.Gender;
+                    traveller.Address = item.Address;
+                    traveller.Gender = traveller.Gender;
                     await _context.SaveChangesAsync();
                     return traveller;
                 }
