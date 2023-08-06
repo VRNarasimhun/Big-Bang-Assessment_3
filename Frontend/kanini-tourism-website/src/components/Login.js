@@ -21,7 +21,8 @@ const Login = () => {
     setUserAnswer(event.target.value);
   }
 
-  function handleLogin() {
+  function handleLogin(event) {
+    event.preventDefault();
     if (parseInt(userAnswer) === captcha.solution) {
       setLoginMessage('Login Successful!');
       // Add your actual login logic here
@@ -31,41 +32,42 @@ const Login = () => {
   }
 
   return (
-    <div className="TravellerLogin">
-      <nav className="navbar">
-        <span className="back-symbol">⬅</span>
-        <h2>Login</h2>
-      </nav>
-      <div className="login-card">
-        <div className="form-group">
-          <label htmlFor="username">Username</label>
-          <input type="text" id="username" name="username" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" />
-        </div>
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleLogin}>
+        <h2 className="login-heading">Login</h2>
+        <input type="text" className="login-input" placeholder="Username" />
+        <input type="password" className="login-input" placeholder="Password" />
 
         {/* Captcha */}
         <div className="captcha">
           <p>
-            Solve this simple math problem to prove you are not a robot:
+            Prove you're not a robot :
             <span className="captcha-equation">
-              {captcha.num1} + {captcha.num2} = ?
+              {captcha.num1} + {captcha.num2} = 
             </span>
           </p>
           <input
             type="text"
             value={userAnswer}
             onChange={handleAnswerChange}
+            className="login-input"
             placeholder="Enter the answer"
           />
-          <button onClick={handleReloadCaptcha}>Reload Captcha</button>
+          <button
+            type="button"
+            onClick={handleReloadCaptcha}
+            className="captcha-button"
+          >
+            Reload Captcha
+          </button>
         </div>
 
-        <button onClick={handleLogin}>Login</button>
-        <p>{loginMessage}</p>
-      </div>
+        <button type="submit" className="login-button">
+          Login
+        </button>
+        <p className="error-message">{loginMessage}</p>
+        
+      </form>
     </div>
   );
 };

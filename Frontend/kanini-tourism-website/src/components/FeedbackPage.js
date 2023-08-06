@@ -44,7 +44,10 @@ const FeedbackPage = () => {
   };
 
   return (
-    <div className="FeedbackPage">
+    <div 
+
+    className="FeedbackPage">
+
       <h2>Feedback Page</h2>
       <div className="feedback-box">
         <label htmlFor="feedback">Your Feedback:</label>

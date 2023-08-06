@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './TravellerRegistration.css';
+import { Link } from 'react-router-dom';
+
 
 const TravellerRegistration = () => {
   const [name, setName] = useState('');
@@ -33,9 +35,12 @@ const TravellerRegistration = () => {
 
   return (
     <div className="TravellerRegistration">
-       <nav className="navbar">
+      <nav className="navbar d-flex justify-content-between">
         <span className="back-symbol">⬅</span>
         <h2>Traveller Registration</h2>
+        <Link to ="/Agent-registration" className="agent-registration-link">Agent Registration</Link> 
+          
+        
       </nav>
       <div className="registration-form">
         <div className="form-group">

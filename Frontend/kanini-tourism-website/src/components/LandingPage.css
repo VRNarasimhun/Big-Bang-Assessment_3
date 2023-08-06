@@ -1,6 +1,7 @@
 .LandingPage {
   text-align: center;
   padding: 20px;
+  background-color: aqua;
 }
 
 .navbar {
@@ -8,6 +9,7 @@
   justify-content: space-between;
   background-color: #333;
   color: #fff;
+  width: 70px;
   padding: 10px;
   margin-bottom: 0;
 }
@@ -23,8 +25,10 @@
 }
 
 .center {
-  margin-top: 0;
+  margin-top: 10%;
+  margin-left: 10%;
   height:100vh
+  
 }
 
 .center input {
@@ -35,6 +39,8 @@
 
 .center .react-datepicker-wrapper {
   display: inline;
+  margin-top: 100vh;
+
 }
 
 .footer {
@@ -49,10 +55,18 @@
   margin-right: 10px;
 
 }
-.ContainerPage
+.LandingPage
 {
-  background-image: url("https://media.istockphoto.com/id/173826320/photo/compass.jpg?s=612x612&w=0&k=20&c=1nJccfWXeF_0LuQLnkop6UYAiaATBWpoZ1RT-ZHcH8M=");
+  background-image: url("https://images.hdqwalls.com/download/travel-hd-1366x768.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height:100vh;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+
 }
+
+
+
+
